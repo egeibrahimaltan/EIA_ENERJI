@@ -7,7 +7,7 @@ Software Engineer | Full Stack Developer
 MERHABA BEN EGE İBRAHİM ALTAN :)
 
 * 🌍  I'm based in İzmir
-* 🚀  I'm currently working on [MY BİG PROJECT](http://github.com/egeibrahimaltan/EIA_ENERJI-)
+* 🚀  I'm currently working on [MY BİG PROJECT](https://github.com/egeibrahimaltan/EIA_ENERJI)
 * 🧠  I'm learning Numpy , React , Nodejs , Vite , Express
 * ⚡  If the code works, don't touch it!
 
