@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Kartı</title>
+    <link rel="stylesheet" href="/static/css/urun.css">
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="logo">E-Ticaret</div>
+        <div class="cart-info">
+            <button class="cart-button">
+                <img src="cart.png" alt="Sepet" class="cart-icon"> <!-- Sepet Resmi -->
+                (<span id="cart-count">0</span>) 
+                <span id="total-price">0.00 TL</span> <!-- Toplam Fiyat -->
+            </button>
+        </div>
+    </nav>
+
+    <div class="products-container">
+        <!-- Ürün Listesi (10 Ürün) -->
+        <div class="product-card">
+            <img src="/static/images/charger.png"  alt="Ürün 1" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 1</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 89.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 1" data-price="89.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="/static/images/charger2.png" alt="Ürün 2" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 2</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 149.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 2" data-price="149.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun3.jpg" alt="Ürün 3" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 3</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 199.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 3" data-price="199.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun4.jpg" alt="Ürün 4" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 4</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 79.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 4" data-price="79.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun5.jpg" alt="Ürün 5" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 5</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 59.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 5" data-price="59.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun6.jpg" alt="Ürün 6" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 6</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 79.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 6" data-price="79.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun7.jpg" alt="Ürün 7" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 7</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 99.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 7" data-price="99.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun8.jpg" alt="Ürün 8" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 8</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 29.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 8" data-price="29.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun9.jpg" alt="Ürün 9" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 9</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 49.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 9" data-price="49.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun10.jpg" alt="Ürün 10" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 10</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 59.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 10" data-price="09.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="urun11.jpg" alt="Ürün 11" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Ürün 11</h3>
+                <p class="product-description">Bu ürün hakkında kısa bir bilgi.</p>
+                <p class="product-price">Fiyat: 39.99 TL</p>
+                <button class="add-to-cart-btn" data-name="Ürün 11" data-price="39.99">Sepete Ekle</button>
+            </div>
+        </div>
+        <!-- Diğer ürünler (toplam 10 ürün) -->
+        <!-- Ürünlerin veri yapısı ve butonlar sepete eklendiğinde adet güncellenecek -->
+    </div>
+
+    <!-- Modal - Ödeme Ekranı -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ödeme Ekranı</h2>
+            <ul id="cart-items"></ul> <!-- Sepetteki ürünler ve adetleri burada gösterilecek -->
+            <p>Toplam: <span id="modal-total-price">0.00 TL</span></p>
+            <button class="complete-order-btn">Siparişi Tamamla</button>
+        </div>
+    </div>
+
+    <script src="/static/js/urun.js"></script>
+</body>
+</html>

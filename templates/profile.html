@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+    <header class="header">
+        <!-- Burada navbar kodunu ekleyebilirsiniz -->
+    </header>
+    
+    <main class="profile">
+        <div class="icon">
+            <img src="{{ url_for('static', filename='images/user_icon2.png') }}" alt="User Icon">
+        </div>
+        <h1>Profil Bilgileri</h1>
+        <form method="POST" action="{{ url_for('profile') }}">
+            <p><strong></strong> {{ current_user.username }}</p>
+            <p><strong>Email:</strong> <input type="email" name="email" value="{{ current_user.email }}" required></p>
+            <p><strong>Yeni Şifre:</strong> <input type="password" name="password" placeholder="Yeni şifrenizi girin"></p>
+            <button type="submit" class="button">Bilgileri Güncelle</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="button">Ana Sayfaya Dön</a>
+    </main>
+</body>
+</html>

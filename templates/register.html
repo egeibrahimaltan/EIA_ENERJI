@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <link rel="stylesheet" href="/static/css/register.css">
+    <div class="form-box">
+        <h2>Kayıt Ol</h2>
+
+        <!-- Flash mesajlarını göster -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-danger">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <!-- Kayıt formu -->
+        <form action="{{ url_for('register') }}" method="post">
+            <div class="input-group">
+                <label for="name">İsim Soyisim</label>
+                <input type="text" id="name" name="name" placeholder="Adınızı girin" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Emailinizi girin" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Şifre</label>
+                <input type="password" id="password" name="password" placeholder="Şifre oluşturun" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Şifreyi Onaylayın</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Şifrenizi onaylayın" required>
+                <small class="error-message" id="password-error">Şifreler uyuşmuyor.</small>
+            </div>
+            <button type="submit" class="btn">Kayıt Ol</button>
+        </form>
+        <p>Zaten bir hesabınız var mı? <a href="{{ url_for('login') }}">Buradan giriş yapın</a></p>
+    </div>
+</div>
+<script src="/static/js/login.js"></script>
+
+{% endblock %}

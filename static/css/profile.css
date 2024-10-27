@@ -1,0 +1,126 @@
+/* Reset default styles for cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #001d3d 0%, #000814 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+    right: 43%;
+}
+
+.profile {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.icon {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: #ffd60a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.icon img {
+    width: 30px;
+    height: 30px;
+}
+
+h1 {
+    color: #ffd60a;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #f1faee;
+    font-size: 16px;
+}
+
+input {
+    width: calc(100% - 24px);
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #ffd60a;
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #000814;
+    border: none;
+    border-radius: 8px;
+    color: #f1faee;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #83c5be;
+}
+
+@media (max-width: 480px) {
+    .profile {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

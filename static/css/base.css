@@ -1,0 +1,72 @@
+/* Genel Stil Ayarları */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #010101;
+    color: #c7f7ef;
+    position: relative;
+    bottom: 150px;
+    display: none;
+}
+
+svg {
+    width: 25px;
+    display: none;
+}
+
+/* Header ve Navbar Ayarları */
+.header {
+    
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative;
+    display: none;
+    
+}
+
+.nav {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.nav_logo {
+    font-size: 35px;
+    padding: 20px; /* Padding değerini küçültüldü */
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    left: 100px;
+    display: none;
+}
+
+.nav_logo:hover {
+    color: #eee5;
+    display: none;
+}
+
+.nav_item {
+    display: flex;
+    column-gap: 50px;
+    font-size: 24px;
+    display: none;
+}
+
+.nav_link {
+    color: #fff;
+    text-decoration: none;
+    display: none;
+}
+
+.nav_link:hover {
+    color: rgb(32, 32, 32);
+    display: none;
+}

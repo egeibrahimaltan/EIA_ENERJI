@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- EGE İBRAHİM ALTAN-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EİA ENERJİ </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="64x64" href="/static/images/fav_icon.png" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+    <!--sidebar ksımı -->
+        <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/static/images/fav_icon.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">EİA ENERJİ</span>
+                    <span class="profession"> Ege Web developer</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Ana Sayfa</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Bildirimler</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQD97DDxkJttqC7oRj0zMA5AJ3ApC1eTpDLXKfsL0-AEK68Q/viewform?usp=sf_link">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Anket</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="podcast.html">
+                            <i class='bx bx-podcast icon' ></i>
+                            <span class="text nav-text">Podcast</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Koyu Tema</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+
+    <script src="/static/js/script.js"></script>
+
+
+
+
+    <!--pc formatında navbar için -->
+    <header class="header">
+        <nav class="nav">
+            <img src="{{ url_for('static', filename='images/icon.png') }}" class="icon" alt="Logo">
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="{{ url_for('index') }}" class="nav_link">Ana Sayfa</a>
+                    <a href="{{ url_for('urun') }}" class="nav_link">Ürünler</a>
+                    {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('profile') }}" class="nav_link">Profil</a>
+                    <a href="{{ url_for('logout') }}" class="nav_link">Çıkış Yap</a>
+                    {% else %}
+                        <a href="{{ url_for('login') }}" class="nav_link">Giriş Yap</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <!-- slider kısmı -->
+
+    <div class="slider">
+        <!-- list itemler -->
+        <div class="list">
+            <div class="item active">
+                <img src="{{ url_for('static', filename='images/img1.jpeg') }}">
+                <div class="content">
+                    <p>EGE İBRAHİM ALTAN</p>
+                    <h2>EİA ENERJİ</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img2.jpeg') }}">
+                <div class="content">
+                    <p>EGE İBRAHİM ALTAN</p>
+                    <h2>EİA ENERJİ</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img3.jpeg') }}">
+                <div class="content">
+                    <p>EGE İBRAHİM ALTAN</p>
+                    <h2>EİA ENERJİ</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img4.jpeg') }}">
+                <div class="content">
+                    <p>EGE İBRAHİM ALTAN</p>
+                    <h2>EİA ENERJİ</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img5.jpeg') }}">
+                <div class="content">
+                    <p>EGE İBRAHİM ALTAN</p>
+                    <h2>EİA ENERJİ</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- buttonlar ama tıklayarak daha iyi gözüküyor -->
+        <div class="arrows">
+            <button id="prev"></button>
+            <button id="next"></button>
+        </div>
+        <!-- altkısımdaki slidebar -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="{{ url_for('static', filename='images/img1.jpeg') }}">
+                <div class="content">
+                    EİA ENERJİ
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img2.jpeg') }}">
+                <div class="content">
+                    EİA ENERJİ
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img3.jpeg') }}">
+                <div class="content">
+                    EİA ENERJİ
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img4.jpeg') }}">
+                <div class="content">
+                    EİA ENERJİ
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/img5.jpeg') }}">
+                <div class="content">
+                    EİA ENERJİ
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card__content">
+        <div class="urun">
+            <img class="panel" src="/static/images/urun_image3.png" alt="">
+            <img class="yeni_img" src="/static/images/güç.png" alt="">
+            <h2 class="urun_txt">ARÇELİK GÜNEŞ PANELİ </h2>
+            <p class="urun_txt2"> ARCLK-FSB-200W Taşınabilir Güneş Paneli Ağırlık
+                Bu taşınabilir güneş paneli, 8,0 kg ağırlığıyla
+                dayanıklı ve sağlam bir yapı sunar. Ağırlığı, her türlü dış 
+                mekan koşulunda stabilite ve güvenilirlik sağlarken, taşınabilirliği 
+                de korunmaktadır. Güç
+                200Wp gücündeki bu solar panel, yüksek enerji ihtiyaçlarınızı karşılamak 
+                için tasarlanmıştır. Güçlü performansı sayesinde, daha büyük elektronik cihazları 
+                bile hızlı ve verimli bir şekilde şarj edebilir. Bu panel, enerji 
+                ihtiyaçlarınızı güvenilir bir şekilde desteklerken çevreye olan etkinizi de minimize eder.
+            </p>
+            <button class="satın_al" onclick="window.location.href='/login'">SATIN AL</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="card1">
+        <div class="card__content1">
+        <div class="urun1">
+            <img class="panel1" src="/static/images/urun_image4.png" alt="">
+            <img class="yeni_img1" src="/static/images/enerji.png" alt="">
+            <h2 class="urun_txt1">ARÇELİK GÜNEŞ PANELİ </h2>
+            <p class="urun_txt3">ARCLK-FSP-100W
+                Taşınabilir Güneş Paneli  Enerji
+                12V aküye sahip araçlarınızı etkin bir şekilde şarj edebilirsiniz. Bu panel, scooter, karavan 
+                ve tekne gibi taşıtlarınızın akülerini doğal ve sürdürülebilir bir yöntemle doldurur Güç
+                100Wp gücündeki solar panel, günlük enerji ihtiyaçlarınızı karşılamak için idealdir. Verimli 
+                güç çıkışı, güneş ışığından maksimum düzeyde faydalanmanızı sağlar. Taşınabilir güneş paneli, sadece 4,1 
+                kg ağırlığında olup kuş tüyü kadar hafiftir. Hafifliği sayesinde, 
+                doğa yürüyüşlerinden kamp aktivitelerine kadar her ortamda kolayca taşınabilir.
+            </p>
+            <button class="satın_al" onclick="window.location.href='/login'">SATIN AL</button>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="card2">
+        <div class="card__content2">
+        <div class="urun2">
+            <img class="panel2" src="/static/images/urun_image5.png" alt="">
+            <img class="yeni_img2" src="/static/images/canta.png" alt="">
+            <h2 class="urun_txt5">ARÇELİK GÜNEŞ PANELİ </h2>
+            <p class="urun_txt4">Dayanıklılık
+                Bu taşınabilir güneş paneli sırt çantası, yüksek dayanımlı 
+                malzemelerden üretilmiştir ve laptop gibi değerli eşyalarınızı 
+                güvenle taşımak için idealdir. Sağlam yapısı, zorlu dış mekan koşullarına 
+                karşı mükemmel koruma sağlar. Panel
+                Solar Sırt Çantası, 8W'lık güneş hücresiyle 
+                donatılmıştır ve doğrudan güneş ışığı altında telefonlarınızı 
+                veya powerbank'larınızı şarj edebilme imkanı sunar. Bu özellik, 
+                özellikle seyahatlerde veya elektrik erişiminin olmadığı açık hava 
+                aktivitelerinde büyük kolaylık sağlar.
+            </p>
+            <button class="satın_al" onclick="window.location.href='/login'">SATIN AL</button>
+        </div>
+        </div>
+    </div>
+
+
+    <script src="/static/js/app.js"></script>
+
+
+    <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>Info</h4>
+            <ul class="links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Compressions</a></li>
+              <li><a href="#">Customers</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Collection</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul class="links">
+              <li><a href="#">Free Designs</a></li>
+              <li><a href="#">Latest Designs</a></li>
+              <li><a href="#">Themes</a></li>
+              <li><a href="#">Popular Designs</a></li>
+              <li><a href="#">Art Skills</a></li>
+              <li><a href="#">New Uploads</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul class="links">
+              <li><a href="#">Customer Agreement</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">GDPR</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Media Kit</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>
+              Subscribe to our newsletter for a weekly dose
+              of news, updates, helpful tips, and
+              exclusive offers.
+            </p>
+            <form action="#">
+              <input type="text" placeholder="Your email" required>
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+            <div class="icons">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+
+
+
+</body>
+</html>
+
+<!-- EGE İBRAHİM ALTAN-->
